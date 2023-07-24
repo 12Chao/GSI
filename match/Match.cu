@@ -775,6 +775,7 @@ first_kernel(unsigned* d_result_tmp_pos)
 //when using constants, they are kept for a whole block instead of occupying registers for each thread
 //NOTICE: we can hack the mechanism by comparing with first_kernel, compiler and running(nvprof --print-gpu-trace)
 __global__ void
+__launch_bounds__(1024, 1)
 second_kernel(unsigned* d_result_tmp, unsigned* d_result_tmp_num)
 /*second_kernel(unsigned* d_result_tmp, unsigned* d_result_tmp_num, const unsigned* __restrict__ d_summary)*/
 {
