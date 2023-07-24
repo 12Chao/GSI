@@ -25,3 +25,13 @@ Li Zeng, Lei Zou, M. Tamer Özsu, Lin Hu, Fan Zhang. **GSI: GPU-friendly Subgrap
 
 My implementation of [GunrockSM](https://github.com/bookug/GunrockSM), [GpSM](https://github.com/bookug/GpSM), and [GPU utilities](https://github.com/bookug/gutil).
 
+#### Installation
+To compile GSI, simply run
+```
+make
+```
+To use PyBind11 to compile the GSI to Python module, check to `minimal_cpp` directory, then run
+```
+pip install pybind11
+python setup.py build_ext -i
+```
